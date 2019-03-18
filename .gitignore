@@ -1,0 +1,3 @@
+# for Cabal
+.ghc.*
+/dist*

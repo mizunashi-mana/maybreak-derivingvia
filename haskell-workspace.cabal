@@ -1,0 +1,33 @@
+cabal-version:  2.4
+name:           haskell-workspace
+version:        0.1.0.0
+author:         Mizunashi Mana
+license:        MIT
+copyright:      2018- Mizunashi Mana
+category:       Toy
+build-type:     Custom
+extra-source-files:
+    README.md
+
+custom-setup
+  setup-depends:
+      Cabal >=2.0
+    , base
+    , cabal-doctest
+
+library
+  autogen-modules:
+      Paths_haskell_workspace
+  other-modules:
+      Paths_haskell_workspace
+  build-depends:
+      base
+    , transformers
+  ghc-options:
+      -Wall
+  default-language: Haskell2010
+  hs-source-dirs: src
+  exposed-modules:
+      TestSpace.StringLiteral
+      TestSpace.NoCpp
+      TestSpace.PolyKinds
