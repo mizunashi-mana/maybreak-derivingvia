@@ -41,5 +41,10 @@ Build profile: -w ghc-8.6.4 -O1
 ```bash
 $ cabal new-freeze
 $ ghcup set 8.6.3 && rm dist* && cabal new-build; ghcup set 8.6.4 && cabal new-build
-no error!
+GHC 8.6.3 Ok
+GHC 8.6.4 Ok
+$ rm cabal.project.freeze && cabal new-freeze "--constraint=any.transformers ==0.5.5.0"
+$ ghcup set 8.6.3 && rm dist* && cabal new-build; ghcup set 8.6.4 && cabal new-build
+GHC 8.6.3 Error
+GHC 8.6.4 Error
 ```
